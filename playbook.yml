@@ -33,7 +33,7 @@
     - role: geerlingguy.nginx
       sudo: yes
 
-    - role: semparatus.tomcat
+    - role: ansible-tomcat
       tomcat_install_dir: "{{ frontend.install_dir }}"
       tomcat_address: localhost
       tomcat_port: "{{ frontend.port }}"
@@ -50,7 +50,7 @@
           password: labpass
           roles: manager,manager-gui,manager-script,admin-gui
 
-    - role: semparatus.tomcat
+    - role: ansible-tomcat
       tomcat_install_dir: "{{ backend.install_dir }}"
       tomcat_address: localhost
       tomcat_port: "{{ backend.port }}"
